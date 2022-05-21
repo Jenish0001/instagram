@@ -15,6 +15,8 @@ class Home_Activity1 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         return inflater.inflate(R.layout.home_activity1, container, false)
+
+
     }
 
 }
