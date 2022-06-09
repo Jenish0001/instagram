@@ -27,11 +27,12 @@ class My_Pageview_Addpter(val mainActivity: MainActivity, val img: Array<Int>) :
         container.addView(view)
 
         return view
+
+
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
         container.removeView(`object` as View?)
-
 
     }
 }

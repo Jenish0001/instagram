@@ -17,7 +17,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var fragment_lay: FrameLayout
     lateinit var img_pageview: ViewPager
 
-    var img = arrayOf(R.drawable.ic_baseline_home_24, R.drawable.ic_launcher_foreground,R.drawable.instagram,R.drawable.instagram1)
+    var img = arrayOf(
+        R.drawable.ic_baseline_home_24
+        , R.drawable.ic_launcher_foreground
+        ,R.drawable.instagram
+        ,R.drawable.instagram1 )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
 
         var adapter_view = My_Pageview_Addpter(this, img)
+
         img_pageview.adapter = adapter_view
 
         loadfragment(Home_Activity1())
@@ -36,13 +41,12 @@ class MainActivity : AppCompatActivity() {
         home_img.setOnClickListener {
 
             loadfragment(Home_Activity1())
+
         }
         search_img.setOnClickListener {
 
             loadfragment(BlankFragment())
         }
-
-
     }
 
     fun blinding() {
@@ -53,7 +57,9 @@ class MainActivity : AppCompatActivity() {
         img_pageview = findViewById<ViewPager>(R.id.img_pageview)
     }
 
-    fun loadfragment(fragment: Fragment) {
+
+    fun loadfragment(fragment: Fragment)
+    {
 
         var fragmentTransient = supportFragmentManager.beginTransaction()
         fragmentTransient.replace(R.id.fragment_lay, fragment)
